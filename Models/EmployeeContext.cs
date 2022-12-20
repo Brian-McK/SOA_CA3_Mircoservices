@@ -1,3 +1,4 @@
+using BrianMcKenna_SOA_CA3.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace BrianMcKenna_SOA_CA3.Models;
@@ -9,5 +10,5 @@ public class EmployeeContext: DbContext
     {
     }
 
-    public DbSet<Employee> UserItems { get; set; } = null!;
+    public DbSet<Employee> Employees { get; set; } = null!;
 }

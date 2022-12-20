@@ -1,4 +1,4 @@
-namespace BrianMcKenna_SOA_CA3.Models;
+namespace BrianMcKenna_SOA_CA3.Entities;
 
 public class Employee
 {
