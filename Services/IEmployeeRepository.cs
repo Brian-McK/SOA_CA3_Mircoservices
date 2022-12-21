@@ -2,7 +2,7 @@ using BrianMcKenna_SOA_CA3.Entities;
 
 namespace BrianMcKenna_SOA_CA3.Services;
 
-public interface IEmployeeRepository: IDisposable
+public interface IEmployeeRepository : IDisposable
 {
     Task<IEnumerable<Employee>> GetAllEmployeesAsync();
     Task<Employee?> GetEmployeeByIdAsync(Guid id);
