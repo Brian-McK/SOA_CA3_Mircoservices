@@ -1,4 +1,5 @@
 using BrianMcKenna_SOA_CA3.Models;
+using BrianMcKenna_SOA_CA3.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,8 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<EmployeeContext>(opt =>
     opt.UseInMemoryDatabase("Employees"));
 builder.Services.AddControllers();
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
+
 
 var app = builder.Build();
 
